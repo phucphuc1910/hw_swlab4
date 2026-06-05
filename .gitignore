@@ -1,0 +1,18 @@
+# IDE logs
+IDE.log
+*.log
+
+# Analytics
+.analytics
+
+# Remote Systems Temp Files
+RemoteSystemsTempFiles/
+
+# Vivado/Vitis generated files
+*.jou
+*.str
+*.bit
+*.ltx
+
+# Eclipse metadata
+.metadata/
