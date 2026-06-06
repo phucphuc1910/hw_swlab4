@@ -115,7 +115,6 @@ proc step_failed { step } {
 OPTRACE "impl_1" END { }
 }
 
-set_msg_config -id {HDL-1065} -limit 10000
 
 OPTRACE "impl_1" START { ROLLUP_1 }
 OPTRACE "Phase: Init Design" START { ROLLUP_AUTO }
@@ -133,7 +132,10 @@ OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
   set_property webtalk.parent_dir /home/phuc/HW_SWlab4/led_controller/led_controller.cache/wt [current_project]
   set_property parent.project_path /home/phuc/HW_SWlab4/led_controller/led_controller.xpr [current_project]
-  set_property ip_repo_paths /home/phuc/HW_SWlab4/ip_repo/led_controller_1_0 [current_project]
+  set_property ip_repo_paths {
+  /home/phuc/HW_SWlab4/ip_repo/led_controller_1_0
+  /home/phuc/HW_SWlab4/hls_nco/solution1/impl/ip
+} [current_project]
   update_ip_catalog
   set_property ip_output_repo /home/phuc/HW_SWlab4/led_controller/led_controller.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]

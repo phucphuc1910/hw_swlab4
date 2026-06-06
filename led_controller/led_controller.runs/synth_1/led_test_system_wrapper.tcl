@@ -70,8 +70,6 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 4
-set_msg_config -id {HDL-1065} -limit 10000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z020clg484-1
 
@@ -85,7 +83,10 @@ set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part digilentinc.com:zedboard:part0:1.1 [current_project]
-set_property ip_repo_paths /home/phuc/HW_SWlab4/ip_repo/led_controller_1_0 [current_project]
+set_property ip_repo_paths {
+  /home/phuc/HW_SWlab4/ip_repo/led_controller_1_0
+  /home/phuc/HW_SWlab4/hls_nco/solution1/impl/ip
+} [current_project]
 update_ip_catalog
 set_property ip_output_repo /home/phuc/HW_SWlab4/led_controller/led_controller.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
@@ -94,10 +95,12 @@ OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib /home/phuc/HW_SWlab4/led_controller/led_controller.gen/sources_1/bd/led_test_system/hdl/led_test_system_wrapper.v
 add_files /home/phuc/HW_SWlab4/led_controller/led_controller.srcs/sources_1/bd/led_test_system/led_test_system.bd
 set_property used_in_implementation false [get_files -all /home/phuc/HW_SWlab4/led_controller/led_controller.gen/sources_1/bd/led_test_system/ip/led_test_system_processing_system7_0_0/led_test_system_processing_system7_0_0.xdc]
-set_property used_in_implementation false [get_files -all /home/phuc/HW_SWlab4/led_controller/led_controller.gen/sources_1/bd/led_test_system/ip/led_test_system_auto_pc_0/led_test_system_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/phuc/HW_SWlab4/led_controller/led_controller.gen/sources_1/bd/led_test_system/ip/led_test_system_rst_ps7_0_100M_0/led_test_system_rst_ps7_0_100M_0_board.xdc]
 set_property used_in_implementation false [get_files -all /home/phuc/HW_SWlab4/led_controller/led_controller.gen/sources_1/bd/led_test_system/ip/led_test_system_rst_ps7_0_100M_0/led_test_system_rst_ps7_0_100M_0.xdc]
 set_property used_in_implementation false [get_files -all /home/phuc/HW_SWlab4/led_controller/led_controller.gen/sources_1/bd/led_test_system/ip/led_test_system_rst_ps7_0_100M_0/led_test_system_rst_ps7_0_100M_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/phuc/HW_SWlab4/led_controller/led_controller.gen/sources_1/bd/led_test_system/ip/led_test_system_xbar_0/led_test_system_xbar_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/phuc/HW_SWlab4/led_controller/led_controller.gen/sources_1/bd/led_test_system/ip/led_test_system_auto_pc_0/led_test_system_auto_pc_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/phuc/HW_SWlab4/led_controller/led_controller.gen/sources_1/bd/led_test_system/ip/led_test_system_nco_0_0/constraints/nco_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/phuc/HW_SWlab4/led_controller/led_controller.gen/sources_1/bd/led_test_system/led_test_system_ooc.xdc]
 
 OPTRACE "Adding files" END { }

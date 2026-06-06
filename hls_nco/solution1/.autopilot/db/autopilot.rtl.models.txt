@@ -1,0 +1,4 @@
+nco_sine_lut_V_ROM_AUTO_1R
+nco_CTRL_s_axi
+nco_DATA_s_axi
+nco

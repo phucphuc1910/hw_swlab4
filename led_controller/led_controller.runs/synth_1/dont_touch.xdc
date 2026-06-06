@@ -12,13 +12,19 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==led_test_sy
 # IP: bd/led_test_system/ip/led_test_system_led_controller_0_0/led_test_system_led_controller_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==led_test_system_led_controller_0_0 || ORIG_REF_NAME==led_test_system_led_controller_0_0} -quiet] -quiet
 
-# IP: bd/led_test_system/ip/led_test_system_auto_pc_0/led_test_system_auto_pc_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==led_test_system_auto_pc_0 || ORIG_REF_NAME==led_test_system_auto_pc_0} -quiet] -quiet
-
 # IP: bd/led_test_system/ip/led_test_system_ps7_0_axi_periph_0/led_test_system_ps7_0_axi_periph_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==led_test_system_ps7_0_axi_periph_0 || ORIG_REF_NAME==led_test_system_ps7_0_axi_periph_0} -quiet] -quiet
 
 # IP: bd/led_test_system/ip/led_test_system_rst_ps7_0_100M_0/led_test_system_rst_ps7_0_100M_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==led_test_system_rst_ps7_0_100M_0 || ORIG_REF_NAME==led_test_system_rst_ps7_0_100M_0} -quiet] -quiet
+
+# IP: bd/led_test_system/ip/led_test_system_xbar_0/led_test_system_xbar_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==led_test_system_xbar_0 || ORIG_REF_NAME==led_test_system_xbar_0} -quiet] -quiet
+
+# IP: bd/led_test_system/ip/led_test_system_auto_pc_0/led_test_system_auto_pc_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==led_test_system_auto_pc_0 || ORIG_REF_NAME==led_test_system_auto_pc_0} -quiet] -quiet
+
+# IP: bd/led_test_system/ip/led_test_system_nco_0_0/led_test_system_nco_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==led_test_system_nco_0_0 || ORIG_REF_NAME==led_test_system_nco_0_0} -quiet] -quiet
 
 # XDC: /home/phuc/HW_SWlab4/led_controller/led_controller.gen/sources_1/bd/led_test_system/led_test_system_ooc.xdc

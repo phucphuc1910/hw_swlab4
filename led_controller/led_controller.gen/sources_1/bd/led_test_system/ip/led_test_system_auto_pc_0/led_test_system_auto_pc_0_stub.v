@@ -3,8 +3,8 @@
 // Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
 // Date        : Fri Jun  5 20:21:56 2026
 // Host        : phuc-Precision-5560 running 64-bit Ubuntu 22.04.5 LTS
-// Command     : write_verilog -force -mode synth_stub
-//               /home/phuc/HW_SWlab4/led_controller/led_controller.gen/sources_1/bd/led_test_system/ip/led_test_system_auto_pc_0/led_test_system_auto_pc_0_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top led_test_system_auto_pc_0 -prefix
+//               led_test_system_auto_pc_0_ led_test_system_auto_pc_0_stub.v
 // Design      : led_test_system_auto_pc_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z020clg484-1

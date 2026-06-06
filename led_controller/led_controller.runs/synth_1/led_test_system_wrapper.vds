@@ -2,8 +2,8 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Fri Jun  5 20:31:58 2026
-# Process ID: 133070
+# Start of session at: Sat Jun  6 08:53:14 2026
+# Process ID: 13033
 # Current directory: /home/phuc/HW_SWlab4/led_controller/led_controller.runs/synth_1
 # Command line: vivado -log led_test_system_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source led_test_system_wrapper.tcl
 # Log file: /home/phuc/HW_SWlab4/led_controller/led_controller.runs/synth_1/led_test_system_wrapper.vds
@@ -13,6 +13,7 @@
 source led_test_system_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/phuc/HW_SWlab4/ip_repo/led_controller_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/phuc/HW_SWlab4/hls_nco/solution1/impl/ip'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/phuc/tools/Xilinx/Vivado/2022.2/data/ip'.
 Command: read_checkpoint -auto_incremental -incremental /home/phuc/HW_SWlab4/led_controller/led_controller.srcs/utils_1/imports/synth_1/led_test_system_wrapper.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from /home/phuc/HW_SWlab4/led_controller/led_controller.srcs/utils_1/imports/synth_1/led_test_system_wrapper.dcp for incremental synthesis
@@ -26,66 +27,98 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 133091
+INFO: [Synth 8-7075] Helper process launched with PID 13064
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/home/phuc/tools/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2761.320 ; gain = 379.770 ; free physical = 12838 ; free virtual = 25039
-Synthesis current peak Physical Memory [PSS] (MB): peak = 2182.296; parent = 1976.819; children = 205.477
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3775.824; parent = 2764.293; children = 1011.531
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2768.613 ; gain = 379.738 ; free physical = 8387 ; free virtual = 19249
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2189.979; parent = 1985.298; children = 204.682
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3784.113; parent = 2772.586; children = 1011.527
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'led_test_system_wrapper' [/home/phuc/HW_SWlab4/led_controller/led_controller.gen/sources_1/bd/led_test_system/hdl/led_test_system_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'led_test_system' [/home/phuc/HW_SWlab4/led_controller/led_controller.gen/sources_1/bd/led_test_system/synth/led_test_system.v:12]
-INFO: [Synth 8-6157] synthesizing module 'led_test_system_led_controller_0_0' [/home/phuc/HW_SWlab4/led_controller/led_controller.runs/synth_1/.Xil/Vivado-133070-phuc-Precision-5560/realtime/led_test_system_led_controller_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'led_test_system_led_controller_0_0' (0#1) [/home/phuc/HW_SWlab4/led_controller/led_controller.runs/synth_1/.Xil/Vivado-133070-phuc-Precision-5560/realtime/led_test_system_led_controller_0_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'led_test_system_processing_system7_0_0' [/home/phuc/HW_SWlab4/led_controller/led_controller.runs/synth_1/.Xil/Vivado-133070-phuc-Precision-5560/realtime/led_test_system_processing_system7_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'led_test_system_processing_system7_0_0' (0#1) [/home/phuc/HW_SWlab4/led_controller/led_controller.runs/synth_1/.Xil/Vivado-133070-phuc-Precision-5560/realtime/led_test_system_processing_system7_0_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'ENET0_MDIO_MDC' of module 'led_test_system_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/phuc/HW_SWlab4/led_controller/led_controller.gen/sources_1/bd/led_test_system/synth/led_test_system.v:166]
-WARNING: [Synth 8-7071] port 'ENET0_MDIO_O' of module 'led_test_system_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/phuc/HW_SWlab4/led_controller/led_controller.gen/sources_1/bd/led_test_system/synth/led_test_system.v:166]
-WARNING: [Synth 8-7071] port 'ENET0_MDIO_T' of module 'led_test_system_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/phuc/HW_SWlab4/led_controller/led_controller.gen/sources_1/bd/led_test_system/synth/led_test_system.v:166]
-WARNING: [Synth 8-7071] port 'TTC0_WAVE0_OUT' of module 'led_test_system_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/phuc/HW_SWlab4/led_controller/led_controller.gen/sources_1/bd/led_test_system/synth/led_test_system.v:166]
-WARNING: [Synth 8-7071] port 'TTC0_WAVE1_OUT' of module 'led_test_system_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/phuc/HW_SWlab4/led_controller/led_controller.gen/sources_1/bd/led_test_system/synth/led_test_system.v:166]
-WARNING: [Synth 8-7071] port 'TTC0_WAVE2_OUT' of module 'led_test_system_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/phuc/HW_SWlab4/led_controller/led_controller.gen/sources_1/bd/led_test_system/synth/led_test_system.v:166]
-WARNING: [Synth 8-7071] port 'USB0_PORT_INDCTL' of module 'led_test_system_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/phuc/HW_SWlab4/led_controller/led_controller.gen/sources_1/bd/led_test_system/synth/led_test_system.v:166]
-WARNING: [Synth 8-7071] port 'USB0_VBUS_PWRSELECT' of module 'led_test_system_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/phuc/HW_SWlab4/led_controller/led_controller.gen/sources_1/bd/led_test_system/synth/led_test_system.v:166]
-WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'led_test_system_processing_system7_0_0' has 73 connections declared, but only 65 given [/home/phuc/HW_SWlab4/led_controller/led_controller.gen/sources_1/bd/led_test_system/synth/led_test_system.v:166]
-INFO: [Synth 8-6157] synthesizing module 'led_test_system_ps7_0_axi_periph_0' [/home/phuc/HW_SWlab4/led_controller/led_controller.gen/sources_1/bd/led_test_system/synth/led_test_system.v:305]
-INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1QS9P9U' [/home/phuc/HW_SWlab4/led_controller/led_controller.gen/sources_1/bd/led_test_system/synth/led_test_system.v:620]
-INFO: [Synth 8-6157] synthesizing module 'led_test_system_auto_pc_0' [/home/phuc/HW_SWlab4/led_controller/led_controller.runs/synth_1/.Xil/Vivado-133070-phuc-Precision-5560/realtime/led_test_system_auto_pc_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'led_test_system_auto_pc_0' (0#1) [/home/phuc/HW_SWlab4/led_controller/led_controller.runs/synth_1/.Xil/Vivado-133070-phuc-Precision-5560/realtime/led_test_system_auto_pc_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1QS9P9U' (0#1) [/home/phuc/HW_SWlab4/led_controller/led_controller.gen/sources_1/bd/led_test_system/synth/led_test_system.v:620]
-INFO: [Synth 8-6155] done synthesizing module 'led_test_system_ps7_0_axi_periph_0' (0#1) [/home/phuc/HW_SWlab4/led_controller/led_controller.gen/sources_1/bd/led_test_system/synth/led_test_system.v:305]
-INFO: [Synth 8-6157] synthesizing module 'led_test_system_rst_ps7_0_100M_0' [/home/phuc/HW_SWlab4/led_controller/led_controller.runs/synth_1/.Xil/Vivado-133070-phuc-Precision-5560/realtime/led_test_system_rst_ps7_0_100M_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'led_test_system_rst_ps7_0_100M_0' (0#1) [/home/phuc/HW_SWlab4/led_controller/led_controller.runs/synth_1/.Xil/Vivado-133070-phuc-Precision-5560/realtime/led_test_system_rst_ps7_0_100M_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'mb_reset' of module 'led_test_system_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [/home/phuc/HW_SWlab4/led_controller/led_controller.gen/sources_1/bd/led_test_system/synth/led_test_system.v:296]
-WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'led_test_system_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [/home/phuc/HW_SWlab4/led_controller/led_controller.gen/sources_1/bd/led_test_system/synth/led_test_system.v:296]
-WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'led_test_system_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [/home/phuc/HW_SWlab4/led_controller/led_controller.gen/sources_1/bd/led_test_system/synth/led_test_system.v:296]
-WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'led_test_system_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [/home/phuc/HW_SWlab4/led_controller/led_controller.gen/sources_1/bd/led_test_system/synth/led_test_system.v:296]
-WARNING: [Synth 8-7023] instance 'rst_ps7_0_100M' of module 'led_test_system_rst_ps7_0_100M_0' has 10 connections declared, but only 6 given [/home/phuc/HW_SWlab4/led_controller/led_controller.gen/sources_1/bd/led_test_system/synth/led_test_system.v:296]
+INFO: [Synth 8-6157] synthesizing module 'led_test_system_led_controller_0_0' [/home/phuc/HW_SWlab4/led_controller/led_controller.runs/synth_1/.Xil/Vivado-13033-phuc-Precision-5560/realtime/led_test_system_led_controller_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'led_test_system_led_controller_0_0' (0#1) [/home/phuc/HW_SWlab4/led_controller/led_controller.runs/synth_1/.Xil/Vivado-13033-phuc-Precision-5560/realtime/led_test_system_led_controller_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'led_test_system_nco_0_0' [/home/phuc/HW_SWlab4/led_controller/led_controller.runs/synth_1/.Xil/Vivado-13033-phuc-Precision-5560/realtime/led_test_system_nco_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'led_test_system_nco_0_0' (0#1) [/home/phuc/HW_SWlab4/led_controller/led_controller.runs/synth_1/.Xil/Vivado-13033-phuc-Precision-5560/realtime/led_test_system_nco_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'interrupt' of module 'led_test_system_nco_0_0' is unconnected for instance 'nco_0' [/home/phuc/HW_SWlab4/led_controller/led_controller.gen/sources_1/bd/led_test_system/synth/led_test_system.v:200]
+WARNING: [Synth 8-7023] instance 'nco_0' of module 'led_test_system_nco_0_0' has 37 connections declared, but only 36 given [/home/phuc/HW_SWlab4/led_controller/led_controller.gen/sources_1/bd/led_test_system/synth/led_test_system.v:200]
+INFO: [Synth 8-6157] synthesizing module 'led_test_system_processing_system7_0_0' [/home/phuc/HW_SWlab4/led_controller/led_controller.runs/synth_1/.Xil/Vivado-13033-phuc-Precision-5560/realtime/led_test_system_processing_system7_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'led_test_system_processing_system7_0_0' (0#1) [/home/phuc/HW_SWlab4/led_controller/led_controller.runs/synth_1/.Xil/Vivado-13033-phuc-Precision-5560/realtime/led_test_system_processing_system7_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'ENET0_MDIO_MDC' of module 'led_test_system_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/phuc/HW_SWlab4/led_controller/led_controller.gen/sources_1/bd/led_test_system/synth/led_test_system.v:237]
+WARNING: [Synth 8-7071] port 'ENET0_MDIO_O' of module 'led_test_system_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/phuc/HW_SWlab4/led_controller/led_controller.gen/sources_1/bd/led_test_system/synth/led_test_system.v:237]
+WARNING: [Synth 8-7071] port 'ENET0_MDIO_T' of module 'led_test_system_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/phuc/HW_SWlab4/led_controller/led_controller.gen/sources_1/bd/led_test_system/synth/led_test_system.v:237]
+WARNING: [Synth 8-7071] port 'TTC0_WAVE0_OUT' of module 'led_test_system_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/phuc/HW_SWlab4/led_controller/led_controller.gen/sources_1/bd/led_test_system/synth/led_test_system.v:237]
+WARNING: [Synth 8-7071] port 'TTC0_WAVE1_OUT' of module 'led_test_system_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/phuc/HW_SWlab4/led_controller/led_controller.gen/sources_1/bd/led_test_system/synth/led_test_system.v:237]
+WARNING: [Synth 8-7071] port 'TTC0_WAVE2_OUT' of module 'led_test_system_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/phuc/HW_SWlab4/led_controller/led_controller.gen/sources_1/bd/led_test_system/synth/led_test_system.v:237]
+WARNING: [Synth 8-7071] port 'USB0_PORT_INDCTL' of module 'led_test_system_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/phuc/HW_SWlab4/led_controller/led_controller.gen/sources_1/bd/led_test_system/synth/led_test_system.v:237]
+WARNING: [Synth 8-7071] port 'USB0_VBUS_PWRSELECT' of module 'led_test_system_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/phuc/HW_SWlab4/led_controller/led_controller.gen/sources_1/bd/led_test_system/synth/led_test_system.v:237]
+WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'led_test_system_processing_system7_0_0' has 73 connections declared, but only 65 given [/home/phuc/HW_SWlab4/led_controller/led_controller.gen/sources_1/bd/led_test_system/synth/led_test_system.v:237]
+INFO: [Synth 8-6157] synthesizing module 'led_test_system_ps7_0_axi_periph_0' [/home/phuc/HW_SWlab4/led_controller/led_controller.gen/sources_1/bd/led_test_system/synth/led_test_system.v:414]
+INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_1I2TUZU' [/home/phuc/HW_SWlab4/led_controller/led_controller.gen/sources_1/bd/led_test_system/synth/led_test_system.v:1103]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_1I2TUZU' (0#1) [/home/phuc/HW_SWlab4/led_controller/led_controller.gen/sources_1/bd/led_test_system/synth/led_test_system.v:1103]
+INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_SP2NFO' [/home/phuc/HW_SWlab4/led_controller/led_controller.gen/sources_1/bd/led_test_system/synth/led_test_system.v:1249]
+INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_SP2NFO' (0#1) [/home/phuc/HW_SWlab4/led_controller/led_controller.gen/sources_1/bd/led_test_system/synth/led_test_system.v:1249]
+INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_MW486V' [/home/phuc/HW_SWlab4/led_controller/led_controller.gen/sources_1/bd/led_test_system/synth/led_test_system.v:1381]
+INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_MW486V' (0#1) [/home/phuc/HW_SWlab4/led_controller/led_controller.gen/sources_1/bd/led_test_system/synth/led_test_system.v:1381]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1QS9P9U' [/home/phuc/HW_SWlab4/led_controller/led_controller.gen/sources_1/bd/led_test_system/synth/led_test_system.v:1513]
+INFO: [Synth 8-6157] synthesizing module 'led_test_system_auto_pc_0' [/home/phuc/HW_SWlab4/led_controller/led_controller.runs/synth_1/.Xil/Vivado-13033-phuc-Precision-5560/realtime/led_test_system_auto_pc_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'led_test_system_auto_pc_0' (0#1) [/home/phuc/HW_SWlab4/led_controller/led_controller.runs/synth_1/.Xil/Vivado-13033-phuc-Precision-5560/realtime/led_test_system_auto_pc_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1QS9P9U' (0#1) [/home/phuc/HW_SWlab4/led_controller/led_controller.gen/sources_1/bd/led_test_system/synth/led_test_system.v:1513]
+INFO: [Synth 8-6157] synthesizing module 'led_test_system_xbar_0' [/home/phuc/HW_SWlab4/led_controller/led_controller.runs/synth_1/.Xil/Vivado-13033-phuc-Precision-5560/realtime/led_test_system_xbar_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'led_test_system_xbar_0' (0#1) [/home/phuc/HW_SWlab4/led_controller/led_controller.runs/synth_1/.Xil/Vivado-13033-phuc-Precision-5560/realtime/led_test_system_xbar_0_stub.v:5]
+WARNING: [Synth 8-689] width (3) of port connection 'm_axi_arprot' does not match port width (9) of module 'led_test_system_xbar_0' [/home/phuc/HW_SWlab4/led_controller/led_controller.gen/sources_1/bd/led_test_system/synth/led_test_system.v:1064]
+WARNING: [Synth 8-689] width (3) of port connection 'm_axi_awprot' does not match port width (9) of module 'led_test_system_xbar_0' [/home/phuc/HW_SWlab4/led_controller/led_controller.gen/sources_1/bd/led_test_system/synth/led_test_system.v:1068]
+INFO: [Synth 8-6155] done synthesizing module 'led_test_system_ps7_0_axi_periph_0' (0#1) [/home/phuc/HW_SWlab4/led_controller/led_controller.gen/sources_1/bd/led_test_system/synth/led_test_system.v:414]
+INFO: [Synth 8-6157] synthesizing module 'led_test_system_rst_ps7_0_100M_0' [/home/phuc/HW_SWlab4/led_controller/led_controller.runs/synth_1/.Xil/Vivado-13033-phuc-Precision-5560/realtime/led_test_system_rst_ps7_0_100M_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'led_test_system_rst_ps7_0_100M_0' (0#1) [/home/phuc/HW_SWlab4/led_controller/led_controller.runs/synth_1/.Xil/Vivado-13033-phuc-Precision-5560/realtime/led_test_system_rst_ps7_0_100M_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'led_test_system_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [/home/phuc/HW_SWlab4/led_controller/led_controller.gen/sources_1/bd/led_test_system/synth/led_test_system.v:405]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'led_test_system_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [/home/phuc/HW_SWlab4/led_controller/led_controller.gen/sources_1/bd/led_test_system/synth/led_test_system.v:405]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'led_test_system_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [/home/phuc/HW_SWlab4/led_controller/led_controller.gen/sources_1/bd/led_test_system/synth/led_test_system.v:405]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'led_test_system_rst_ps7_0_100M_0' is unconnected for instance 'rst_ps7_0_100M' [/home/phuc/HW_SWlab4/led_controller/led_controller.gen/sources_1/bd/led_test_system/synth/led_test_system.v:405]
+WARNING: [Synth 8-7023] instance 'rst_ps7_0_100M' of module 'led_test_system_rst_ps7_0_100M_0' has 10 connections declared, but only 6 given [/home/phuc/HW_SWlab4/led_controller/led_controller.gen/sources_1/bd/led_test_system/synth/led_test_system.v:405]
 INFO: [Synth 8-6155] done synthesizing module 'led_test_system' (0#1) [/home/phuc/HW_SWlab4/led_controller/led_controller.gen/sources_1/bd/led_test_system/synth/led_test_system.v:12]
 INFO: [Synth 8-6155] done synthesizing module 'led_test_system_wrapper' (0#1) [/home/phuc/HW_SWlab4/led_controller/led_controller.gen/sources_1/bd/led_test_system/hdl/led_test_system_wrapper.v:12]
 WARNING: [Synth 8-7129] Port M_ACLK in module s00_couplers_imp_1QS9P9U is either unconnected or has no load
 WARNING: [Synth 8-7129] Port M_ARESETN in module s00_couplers_imp_1QS9P9U is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ACLK in module led_test_system_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ARESETN in module led_test_system_ps7_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ACLK in module m02_couplers_imp_MW486V is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ARESETN in module m02_couplers_imp_MW486V is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ACLK in module m02_couplers_imp_MW486V is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ARESETN in module m02_couplers_imp_MW486V is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ACLK in module m01_couplers_imp_SP2NFO is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ARESETN in module m01_couplers_imp_SP2NFO is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ACLK in module m01_couplers_imp_SP2NFO is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ARESETN in module m01_couplers_imp_SP2NFO is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ACLK in module m00_couplers_imp_1I2TUZU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M_ARESETN in module m00_couplers_imp_1I2TUZU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ACLK in module m00_couplers_imp_1I2TUZU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S_ARESETN in module m00_couplers_imp_1I2TUZU is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_ACLK in module led_test_system_ps7_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M00_ARESETN in module led_test_system_ps7_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M01_ACLK in module led_test_system_ps7_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M01_ARESETN in module led_test_system_ps7_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M02_ACLK in module led_test_system_ps7_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M02_ARESETN in module led_test_system_ps7_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S00_ACLK in module led_test_system_ps7_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S00_ARESETN in module led_test_system_ps7_0_axi_periph_0 is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2833.258 ; gain = 451.707 ; free physical = 12745 ; free virtual = 24947
-Synthesis current peak Physical Memory [PSS] (MB): peak = 2182.296; parent = 1976.819; children = 205.477
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3844.793; parent = 2833.262; children = 1011.531
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2841.551 ; gain = 452.676 ; free physical = 8310 ; free virtual = 19174
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2189.979; parent = 1985.298; children = 204.682
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3853.082; parent = 2841.555; children = 1011.527
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2851.070 ; gain = 469.520 ; free physical = 12745 ; free virtual = 24947
-Synthesis current peak Physical Memory [PSS] (MB): peak = 2182.296; parent = 1976.819; children = 205.477
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3862.605; parent = 2851.074; children = 1011.531
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2859.363 ; gain = 470.488 ; free physical = 8327 ; free virtual = 19190
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2189.979; parent = 1985.298; children = 204.682
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3870.895; parent = 2859.367; children = 1011.527
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2851.070 ; gain = 469.520 ; free physical = 12745 ; free virtual = 24947
-Synthesis current peak Physical Memory [PSS] (MB): peak = 2182.296; parent = 1976.819; children = 205.477
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3862.605; parent = 2851.074; children = 1011.531
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2859.363 ; gain = 470.488 ; free physical = 8327 ; free virtual = 19190
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2189.979; parent = 1985.298; children = 204.682
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3870.895; parent = 2859.367; children = 1011.527
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2851.070 ; gain = 0.000 ; free physical = 12745 ; free virtual = 24947
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2859.363 ; gain = 0.000 ; free physical = 8327 ; free virtual = 19190
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -94,10 +127,14 @@ Parsing XDC File [/home/phuc/HW_SWlab4/led_controller/led_controller.gen/sources
 Finished Parsing XDC File [/home/phuc/HW_SWlab4/led_controller/led_controller.gen/sources_1/bd/led_test_system/ip/led_test_system_processing_system7_0_0/led_test_system_processing_system7_0_0/led_test_system_processing_system7_0_0_in_context.xdc] for cell 'led_test_system_i/processing_system7_0'
 Parsing XDC File [/home/phuc/HW_SWlab4/led_controller/led_controller.gen/sources_1/bd/led_test_system/ip/led_test_system_led_controller_0_0/led_test_system_led_controller_0_0/led_test_system_led_controller_0_0_in_context.xdc] for cell 'led_test_system_i/led_controller_0'
 Finished Parsing XDC File [/home/phuc/HW_SWlab4/led_controller/led_controller.gen/sources_1/bd/led_test_system/ip/led_test_system_led_controller_0_0/led_test_system_led_controller_0_0/led_test_system_led_controller_0_0_in_context.xdc] for cell 'led_test_system_i/led_controller_0'
+Parsing XDC File [/home/phuc/HW_SWlab4/led_controller/led_controller.gen/sources_1/bd/led_test_system/ip/led_test_system_xbar_0/led_test_system_xbar_0/led_test_system_xbar_0_in_context.xdc] for cell 'led_test_system_i/ps7_0_axi_periph/xbar'
+Finished Parsing XDC File [/home/phuc/HW_SWlab4/led_controller/led_controller.gen/sources_1/bd/led_test_system/ip/led_test_system_xbar_0/led_test_system_xbar_0/led_test_system_xbar_0_in_context.xdc] for cell 'led_test_system_i/ps7_0_axi_periph/xbar'
 Parsing XDC File [/home/phuc/HW_SWlab4/led_controller/led_controller.gen/sources_1/bd/led_test_system/ip/led_test_system_auto_pc_0/led_test_system_auto_pc_0/led_test_system_auto_pc_0_in_context.xdc] for cell 'led_test_system_i/ps7_0_axi_periph/s00_couplers/auto_pc'
 Finished Parsing XDC File [/home/phuc/HW_SWlab4/led_controller/led_controller.gen/sources_1/bd/led_test_system/ip/led_test_system_auto_pc_0/led_test_system_auto_pc_0/led_test_system_auto_pc_0_in_context.xdc] for cell 'led_test_system_i/ps7_0_axi_periph/s00_couplers/auto_pc'
 Parsing XDC File [/home/phuc/HW_SWlab4/led_controller/led_controller.gen/sources_1/bd/led_test_system/ip/led_test_system_rst_ps7_0_100M_0/led_test_system_rst_ps7_0_100M_0/led_test_system_rst_ps7_0_100M_0_in_context.xdc] for cell 'led_test_system_i/rst_ps7_0_100M'
 Finished Parsing XDC File [/home/phuc/HW_SWlab4/led_controller/led_controller.gen/sources_1/bd/led_test_system/ip/led_test_system_rst_ps7_0_100M_0/led_test_system_rst_ps7_0_100M_0/led_test_system_rst_ps7_0_100M_0_in_context.xdc] for cell 'led_test_system_i/rst_ps7_0_100M'
+Parsing XDC File [/home/phuc/HW_SWlab4/led_controller/led_controller.gen/sources_1/bd/led_test_system/ip/led_test_system_nco_0_0/led_test_system_nco_0_0/led_test_system_nco_0_0_in_context.xdc] for cell 'led_test_system_i/nco_0'
+Finished Parsing XDC File [/home/phuc/HW_SWlab4/led_controller/led_controller.gen/sources_1/bd/led_test_system/ip/led_test_system_nco_0_0/led_test_system_nco_0_0/led_test_system_nco_0_0_in_context.xdc] for cell 'led_test_system_i/nco_0'
 Parsing XDC File [/home/phuc/HW_SWlab4/led_controller/led_controller.srcs/constrs_1/new/led_constraints.xdc]
 Finished Parsing XDC File [/home/phuc/HW_SWlab4/led_controller/led_controller.srcs/constrs_1/new/led_constraints.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/phuc/HW_SWlab4/led_controller/led_controller.srcs/constrs_1/new/led_constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/led_test_system_wrapper_propImpl.xdc].
@@ -106,27 +143,27 @@ Parsing XDC File [/home/phuc/HW_SWlab4/led_controller/led_controller.runs/synth_
 Finished Parsing XDC File [/home/phuc/HW_SWlab4/led_controller/led_controller.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2924.008 ; gain = 0.000 ; free physical = 12761 ; free virtual = 24964
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2929.332 ; gain = 0.000 ; free physical = 8350 ; free virtual = 19215
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2924.008 ; gain = 0.000 ; free physical = 12761 ; free virtual = 24964
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2929.332 ; gain = 0.000 ; free physical = 8350 ; free virtual = 19215
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/home/phuc/tools/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2924.008 ; gain = 542.457 ; free physical = 12814 ; free virtual = 25016
-Synthesis current peak Physical Memory [PSS] (MB): peak = 2182.296; parent = 1976.819; children = 205.477
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3903.527; parent = 2891.996; children = 1011.531
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2929.332 ; gain = 540.457 ; free physical = 8368 ; free virtual = 19233
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2189.979; parent = 1985.298; children = 204.682
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3908.848; parent = 2897.320; children = 1011.527
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2924.008 ; gain = 542.457 ; free physical = 12814 ; free virtual = 25016
-Synthesis current peak Physical Memory [PSS] (MB): peak = 2182.296; parent = 1976.819; children = 205.477
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3903.527; parent = 2891.996; children = 1011.531
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2929.332 ; gain = 540.457 ; free physical = 8368 ; free virtual = 19233
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2189.979; parent = 1985.298; children = 204.682
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3908.848; parent = 2897.320; children = 1011.527
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -394,18 +431,20 @@ Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_ps_srstb. (constraint
 Applied set_property KEEP_HIERARCHY = SOFT for led_test_system_i. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for led_test_system_i/processing_system7_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for led_test_system_i/led_controller_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for led_test_system_i/ps7_0_axi_periph/xbar. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for led_test_system_i/ps7_0_axi_periph/s00_couplers/auto_pc. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for led_test_system_i/ps7_0_axi_periph. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for led_test_system_i/rst_ps7_0_100M. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for led_test_system_i/nco_0. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2924.008 ; gain = 542.457 ; free physical = 12816 ; free virtual = 25018
-Synthesis current peak Physical Memory [PSS] (MB): peak = 2182.296; parent = 1976.819; children = 205.477
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3903.527; parent = 2891.996; children = 1011.531
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2929.332 ; gain = 540.457 ; free physical = 8374 ; free virtual = 19239
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2189.979; parent = 1985.298; children = 204.682
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3908.848; parent = 2897.320; children = 1011.527
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2924.008 ; gain = 542.457 ; free physical = 12816 ; free virtual = 25019
-Synthesis current peak Physical Memory [PSS] (MB): peak = 2182.296; parent = 1976.819; children = 205.477
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3903.527; parent = 2891.996; children = 1011.531
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2929.332 ; gain = 540.457 ; free physical = 8374 ; free virtual = 19240
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2189.979; parent = 1985.298; children = 204.682
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3908.848; parent = 2897.320; children = 1011.527
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -427,38 +466,42 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
-WARNING: [Synth 8-7129] Port ACLK in module led_test_system_ps7_0_axi_periph_0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port ARESETN in module led_test_system_ps7_0_axi_periph_0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port M00_ACLK in module led_test_system_ps7_0_axi_periph_0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port M00_ARESETN in module led_test_system_ps7_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M01_ACLK in module led_test_system_ps7_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M01_ARESETN in module led_test_system_ps7_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M02_ACLK in module led_test_system_ps7_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port M02_ARESETN in module led_test_system_ps7_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S00_ACLK in module led_test_system_ps7_0_axi_periph_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port S00_ARESETN in module led_test_system_ps7_0_axi_periph_0 is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2924.008 ; gain = 542.457 ; free physical = 12833 ; free virtual = 25041
-Synthesis current peak Physical Memory [PSS] (MB): peak = 2182.296; parent = 1976.819; children = 205.477
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3903.527; parent = 2891.996; children = 1011.531
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2929.332 ; gain = 540.457 ; free physical = 8344 ; free virtual = 19216
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2189.979; parent = 1985.298; children = 204.682
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3908.848; parent = 2897.320; children = 1011.527
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2924.008 ; gain = 542.457 ; free physical = 12825 ; free virtual = 25032
-Synthesis current peak Physical Memory [PSS] (MB): peak = 2266.272; parent = 2060.838; children = 205.477
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3903.527; parent = 2891.996; children = 1011.531
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2929.332 ; gain = 540.457 ; free physical = 8328 ; free virtual = 19198
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2279.284; parent = 2074.665; children = 204.682
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3908.848; parent = 2897.320; children = 1011.527
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2924.008 ; gain = 542.457 ; free physical = 12825 ; free virtual = 25032
-Synthesis current peak Physical Memory [PSS] (MB): peak = 2266.499; parent = 2061.064; children = 205.477
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3903.527; parent = 2891.996; children = 1011.531
+Finished Timing Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2929.332 ; gain = 540.457 ; free physical = 8328 ; free virtual = 19198
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2279.526; parent = 2074.907; children = 204.682
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3908.848; parent = 2897.320; children = 1011.527
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2924.008 ; gain = 542.457 ; free physical = 12810 ; free virtual = 25017
-Synthesis current peak Physical Memory [PSS] (MB): peak = 2266.499; parent = 2061.064; children = 205.477
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3903.527; parent = 2891.996; children = 1011.531
+Finished Technology Mapping : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2929.332 ; gain = 540.457 ; free physical = 8337 ; free virtual = 19204
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2280.210; parent = 2075.591; children = 204.682
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3908.848; parent = 2897.320; children = 1011.527
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -476,49 +519,49 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2924.008 ; gain = 542.457 ; free physical = 12851 ; free virtual = 25058
-Synthesis current peak Physical Memory [PSS] (MB): peak = 2266.499; parent = 2061.064; children = 205.477
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3903.527; parent = 2891.996; children = 1011.531
+Finished IO Insertion : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2929.332 ; gain = 540.457 ; free physical = 8380 ; free virtual = 19248
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2280.358; parent = 2075.739; children = 204.682
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3908.848; parent = 2897.320; children = 1011.527
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2924.008 ; gain = 542.457 ; free physical = 12851 ; free virtual = 25058
-Synthesis current peak Physical Memory [PSS] (MB): peak = 2266.499; parent = 2061.064; children = 205.477
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3903.527; parent = 2891.996; children = 1011.531
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2929.332 ; gain = 540.457 ; free physical = 8380 ; free virtual = 19248
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2280.358; parent = 2075.739; children = 204.682
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3908.848; parent = 2897.320; children = 1011.527
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2924.008 ; gain = 542.457 ; free physical = 12851 ; free virtual = 25058
-Synthesis current peak Physical Memory [PSS] (MB): peak = 2266.499; parent = 2061.064; children = 205.477
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3903.527; parent = 2891.996; children = 1011.531
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2929.332 ; gain = 540.457 ; free physical = 8380 ; free virtual = 19248
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2280.437; parent = 2075.817; children = 204.682
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3908.848; parent = 2897.320; children = 1011.527
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2924.008 ; gain = 542.457 ; free physical = 12851 ; free virtual = 25058
-Synthesis current peak Physical Memory [PSS] (MB): peak = 2266.499; parent = 2061.064; children = 205.477
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3903.527; parent = 2891.996; children = 1011.531
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2929.332 ; gain = 540.457 ; free physical = 8380 ; free virtual = 19248
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2280.499; parent = 2075.880; children = 204.682
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3908.848; parent = 2897.320; children = 1011.527
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2924.008 ; gain = 542.457 ; free physical = 12851 ; free virtual = 25058
-Synthesis current peak Physical Memory [PSS] (MB): peak = 2266.499; parent = 2061.064; children = 205.477
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3903.527; parent = 2891.996; children = 1011.531
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2929.332 ; gain = 540.457 ; free physical = 8380 ; free virtual = 19248
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2280.499; parent = 2075.880; children = 204.682
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3908.848; parent = 2897.320; children = 1011.527
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2924.008 ; gain = 542.457 ; free physical = 12851 ; free virtual = 25058
-Synthesis current peak Physical Memory [PSS] (MB): peak = 2266.499; parent = 2061.064; children = 205.477
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3903.527; parent = 2891.996; children = 1011.531
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2929.332 ; gain = 540.457 ; free physical = 8380 ; free virtual = 19248
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2280.499; parent = 2075.880; children = 204.682
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3908.848; parent = 2897.320; children = 1011.527
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -528,10 +571,12 @@ Report BlackBoxes:
 +------+---------------------------------------+----------+
 |      |BlackBox name                          |Instances |
 +------+---------------------------------------+----------+
-|1     |led_test_system_auto_pc_0              |         1|
-|2     |led_test_system_led_controller_0_0     |         1|
-|3     |led_test_system_processing_system7_0_0 |         1|
-|4     |led_test_system_rst_ps7_0_100M_0       |         1|
+|1     |led_test_system_xbar_0                 |         1|
+|2     |led_test_system_auto_pc_0              |         1|
+|3     |led_test_system_led_controller_0_0     |         1|
+|4     |led_test_system_nco_0_0                |         1|
+|5     |led_test_system_processing_system7_0_0 |         1|
+|6     |led_test_system_rst_ps7_0_100M_0       |         1|
 +------+---------------------------------------+----------+
 
 Report Cell Usage: 
@@ -540,31 +585,33 @@ Report Cell Usage:
 +------+-------------------------------------+------+
 |1     |led_test_system_auto_pc              |     1|
 |2     |led_test_system_led_controller_0     |     1|
-|3     |led_test_system_processing_system7_0 |     1|
-|4     |led_test_system_rst_ps7_0_100M       |     1|
-|5     |OBUF                                 |     8|
+|3     |led_test_system_nco_0                |     1|
+|4     |led_test_system_processing_system7_0 |     1|
+|5     |led_test_system_rst_ps7_0_100M       |     1|
+|6     |led_test_system_xbar                 |     1|
+|7     |OBUF                                 |     8|
 +------+-------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2924.008 ; gain = 542.457 ; free physical = 12851 ; free virtual = 25058
-Synthesis current peak Physical Memory [PSS] (MB): peak = 2266.499; parent = 2061.064; children = 205.477
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3903.527; parent = 2891.996; children = 1011.531
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2929.332 ; gain = 540.457 ; free physical = 8380 ; free virtual = 19248
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2280.530; parent = 2075.911; children = 204.682
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3908.848; parent = 2897.320; children = 1011.527
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 5 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2924.008 ; gain = 469.520 ; free physical = 12851 ; free virtual = 25058
-Synthesis Optimization Complete : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2924.008 ; gain = 542.457 ; free physical = 12851 ; free virtual = 25058
+Synthesis finished with 0 errors, 0 critical warnings and 9 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2929.332 ; gain = 470.488 ; free physical = 8430 ; free virtual = 19298
+Synthesis Optimization Complete : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2929.332 ; gain = 540.457 ; free physical = 8430 ; free virtual = 19298
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2924.008 ; gain = 0.000 ; free physical = 12969 ; free virtual = 25177
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2929.332 ; gain = 0.000 ; free physical = 8545 ; free virtual = 19413
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2924.008 ; gain = 0.000 ; free physical = 12969 ; free virtual = 25177
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2929.332 ; gain = 0.000 ; free physical = 8498 ; free virtual = 19366
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete, checksum: b16bc980
+Synth Design complete, checksum: cab849bf
 INFO: [Common 17-83] Releasing license: Synthesis
-40 Infos, 23 Warnings, 0 Critical Warnings and 0 Errors encountered.
+51 Infos, 49 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:18 . Memory (MB): peak = 2924.008 ; gain = 877.020 ; free physical = 13099 ; free virtual = 25306
+synth_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:21 . Memory (MB): peak = 2929.332 ; gain = 875.051 ; free physical = 8624 ; free virtual = 19492
 INFO: [Common 17-1381] The checkpoint '/home/phuc/HW_SWlab4/led_controller/led_controller.runs/synth_1/led_test_system_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file led_test_system_wrapper_utilization_synth.rpt -pb led_test_system_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Jun  5 20:32:22 2026...
+INFO: [Common 17-206] Exiting Vivado at Sat Jun  6 08:53:42 2026...
